@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tekiwa</title>
+<meta name="description" content="Tekiwa — el encargado de tu tienda. Márgenes reales, inventario y publicaciones para vendedores de Mercado Libre.">
+<meta property="og:title" content="Tekiwa">
+<meta property="og:description" content="El encargado de tu tienda. Márgenes reales, inventario y publicaciones para vendedores de Mercado Libre.">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #faf9f7;
+    --surface: #ffffff;
+    --fg: #1c1a17;
+    --muted: #6b655c;
+    --line: #e4e0d9;
+    --accent: #0f766e;
+    --shadow: 0 1px 2px rgba(28,26,23,.04), 0 8px 24px rgba(28,26,23,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17150f;
+      --surface: #1f1c16;
+      --fg: #f2efe9;
+      --muted: #a29a8c;
+      --line: #322d24;
+      --accent: #5eead4;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17150f;
+    --surface: #1f1c16;
+    --fg: #f2efe9;
+    --muted: #a29a8c;
+    --line: #322d24;
+    --accent: #5eead4;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .envoltura { max-width: 60rem; margin: 0 auto; padding: 0 16px; }
+
+  header { padding: 2rem 0 0; }
+  .marca {
+    font-weight: 600;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: var(--muted);
+  }
+
+  .portada { padding: clamp(3rem, 12vw, 7rem) 0 clamp(2.5rem, 8vw, 4rem); max-width: 40rem; }
+  h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(2.75rem, 11vw, 5rem);
+    line-height: .95;
+    letter-spacing: -.035em;
+    font-weight: 600;
+  }
+  h1 .punto { color: var(--accent); }
+  .lema { margin: 0 0 1.5rem; font-size: clamp(1.15rem, 3.5vw, 1.4rem); color: var(--fg); }
+  .origen {
+    margin: 0;
+    color: var(--muted);
+    font-size: .95rem;
+    border-left: 2px solid var(--line);
+    padding-left: 1rem;
+  }
+  .origen i { font-style: italic; }
+
+  .rejilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+    padding-bottom: clamp(3rem, 8vw, 5rem);
+  }
+  .tarjeta {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 1.4rem;
+    box-shadow: var(--shadow);
+  }
+  .tarjeta h2 {
+    margin: 0 0 .4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -.01em;
+  }
+  .tarjeta p { margin: 0; color: var(--muted); font-size: .93rem; }
+
+  .estado {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .4rem .85rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: .8rem;
+    color: var(--muted);
+    background: var(--surface);
+  }
+  .punto-vivo {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--accent);
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 1.5rem 0 3rem;
+    color: var(--muted);
+    font-size: .85rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem 1.5rem;
+    justify-content: space-between;
+  }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+  <div class="envoltura">
+    <header><div class="marca">Tekiwa</div></header>
+
+    <main>
+      <section class="portada">
+        <h1>Tekiwa<span class="punto">.</span></h1>
+        <p class="lema">El encargado de tu tienda.</p>
+        <p class="origen">
+          Del náhuatl <i>tequihua</i>: quien tiene el cargo, el responsable del trabajo.
+          De <i>tequitl</i>, oficio.
+        </p>
+      </section>
+
+      <section class="rejilla">
+        <article class="tarjeta">
+          <h2>Márgenes reales</h2>
+          <p>Comisión, envío y costo descontados antes de que decidas el precio. Sin estimar a ojo.</p>
+        </article>
+        <article class="tarjeta">
+          <h2>Inventario que cuadra</h2>
+          <p>Un solo catálogo, con el stock al día en cada canal donde vendes.</p>
+        </article>
+        <article class="tarjeta">
+          <h2>Publicaciones sin repetir</h2>
+          <p>Capturas el producto una vez y se publica donde lo necesites.</p>
+        </article>
+        <article class="tarjeta">
+          <h2>Varias cuentas, un catálogo</h2>
+          <p>Productos y existencias compartidos; ventas y preguntas separadas por tienda.</p>
+        </article>
+      </section>
+
+      <p><span class="estado"><span class="punto-vivo"></span> En desarrollo</span></p>
+    </main>
+
+    <footer>
+      <span>tekiwa.com</span>
+      <span>Hecho en México</span>
+    </footer>
+  </div>
+</body>
+</html>
